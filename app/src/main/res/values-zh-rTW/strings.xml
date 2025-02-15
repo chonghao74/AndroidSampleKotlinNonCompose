@@ -1,0 +1,17 @@
+<resources>
+     <string name="first_fragment_label">第一片段</string>
+     <string name="second_fragment_label">第二片段</string>
+     <string name="next">下一步</string>
+     <string name="previous">上一步</string>
+     <string name="lorem_ipsum">是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，我是台灣人，是台灣人，是台灣人，是台灣人，是台灣人，</string>
+     <string name="channel_name">測試 訊息 頻道名稱</string>
+     <string name="channel_description">測試 訊息 頻道說明</string>
+     <string name="title_activity_navigation">導航活動</string>
+     <string name="title_home">家</string>
+     <string name="title_dashboard">儀表板</string>
+     <string name="title_notifications">訊息</string>
+     <string name="text_account">設定</string>
+     <string name="text_locale_en">語言-英文</string>
+     <string name="text_locale_zh">語言-中文</string>
+     <string name="text_locale_default">語言-系統</string>
+</resources>

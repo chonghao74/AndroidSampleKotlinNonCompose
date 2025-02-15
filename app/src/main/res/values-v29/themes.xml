@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.AndroidSampleKotlinNonCompose" parent="Base.Theme.AndroidSampleKotlinNonCompose">
+        <item name="android:forceDarkAllowed">true</item>
+    </style>
+
+    <style name="MyBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/MyBottomSheetStyle</item>
+        <!-- ATTENTION: BottomSheetDialog needs _both_, this attribute set to true _and_
+             a (semi)transparent navigation bar color, to enable edge-to-edge mode. -->
+        <item name="enableEdgeToEdge">true</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="shapeAppearanceLargeComponent">@style/MyBottomSheetShapeAppearance</item>
+    </style>
+
+    <style name="MyBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="android:windowIsFloating">false</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="MyBottomSheetShapeAppearance" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+</resources>

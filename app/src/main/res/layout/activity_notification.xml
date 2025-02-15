@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow1"
+    tools:context=".ui.activity.NotificationActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <Button
+                android:id="@+id/btnShowBasicNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Notification Behavior \n clearAllAndToLauncher 1"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btnShowImportanceNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Importance Notification Behavior \n notClearAllAndToLauncher 2"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowBasicNotification" />
+            <Button
+                android:id="@+id/btnShowLoadingNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading Notification"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowImportanceNotification" />
+            <Button
+                android:id="@+id/btnUpdateLoadingNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Loading Notification"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowLoadingNotification" />
+            <Button
+                android:id="@+id/btnBigTextNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Big Text PictureNotification By Basic Behavior \n intentToActivity 3"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnUpdateLoadingNotification" />
+            <Button
+                android:id="@+id/btnBigPictureNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Big Picture Notification By Importance"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBigTextNotification" />
+            <Button
+                android:id="@+id/btnShowNotificationGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Group"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBigPictureNotification" />
+            <Button
+                android:id="@+id/btnShowNotificationGroupAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Group"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowNotificationGroup" />
+            <Button
+                android:id="@+id/btnShowNotificationTestFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification Test Fragment"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowNotificationGroupAdd" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

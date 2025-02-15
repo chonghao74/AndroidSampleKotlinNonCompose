@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow1"
+    tools:context=".ui.activity.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvApplicationID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ApplicationID"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnToRoomDemo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To RoomDemo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvApplicationID" />
+
+            <Button
+                android:id="@+id/btnTestProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To Progress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToRoomDemo" />
+
+            <Button
+                android:id="@+id/btnToToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To Toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnTestProgress" />
+
+            <Button
+                android:id="@+id/btnToCollapseToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To CollapseToolbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToToolbar" />
+
+            <Button
+                android:id="@+id/btnTestDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dark"
+                android:textColor="@color/white_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToCollapseToolbar" />
+
+            <Button
+                android:id="@+id/btnTestNotDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Not Dark"
+                android:textColor="@color/white_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.45"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToCollapseToolbar" />
+
+            <Button
+                android:id="@+id/btnUnspecifiedMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unspecified"
+                android:textColor="@color/white_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnToCollapseToolbar" />
+
+            <Button
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To HomeActivity"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnTestDarkMode" />
+
+            <Button
+                android:id="@+id/btnDialogFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To DialogActivity"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnHome" />
+
+            <Button
+                android:id="@+id/btnViewModel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To ViewModelActivity"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDialogFragment" />
+
+            <Button
+                android:id="@+id/btnStateRecovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To SystemStateRecoveryActivity"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnViewModel" />
+
+            <Button
+                android:id="@+id/btnIntentNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To NotificationActivity"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnStateRecovery" />
+
+            <Button
+                android:id="@+id/btnIntentNavigationToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To Navigation Scroll ToolBar"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIntentNotification" />
+
+            <Button
+                android:id="@+id/btnIntentNavigationNoToolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To Navigation Not Scroll ToolBar"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIntentNavigationToolBar" />
+
+            <Button
+                android:id="@+id/btnIntentNavigationNotScrollToolBarNest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intent To Navigation Not Scroll ToolBar and Nest"
+                android:textColor="@color/select_text_color_black_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIntentNavigationNoToolBar" />
+
+            <LinearLayout
+                android:id="@+id/llTestLocale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIntentNavigationNotScrollToolBarNest">
+                <Button
+                    android:id="@+id/btnTestLocaleZH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_locale_zh"
+                    android:textColor="@color/select_text_color_black_white"
+                    />
+                <Button
+                    android:id="@+id/btnTestLocaleEN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_locale_en"
+                    android:textColor="@color/select_text_color_black_white"
+                    />
+                <Button
+                    android:id="@+id/btnTestLocaleDefault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_locale_default"
+                    android:textColor="@color/select_text_color_black_white"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvTest"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ApplicationIDdfsdfsdfsdfsdf"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llTestLocale" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clickable="true"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

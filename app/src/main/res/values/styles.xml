@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="Widget.Theme.AndroidSampleKotlinNonCompose.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="bottomView_indicator_style_white_black" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/white_black</item>
+    </style>
+    <style name="bottomView_indicator_style_deep_sky_blue" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/deep_sky_blue</item>
+    </style>
+</resources>

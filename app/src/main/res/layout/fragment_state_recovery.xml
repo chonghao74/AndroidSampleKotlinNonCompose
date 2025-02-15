@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_black"
+    tools:context=".ui.fragment.StateRecoveryFragment">
+
+    <TextView
+        android:id="@+id/tvTitleFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment\nonSaveInstanceState\nonViewStateRestored"
+        android:textColor="@color/black_white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+    <TextView
+        android:id="@+id/tvTestState1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="@color/black_white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleFragment1" />
+
+    <Button
+        android:id="@+id/btnChangeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="change"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvTestState1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleFragment1" />
+    <EditText
+        android:id="@+id/edTestState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="@color/black_white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTestState1" />
+    <TextView
+        android:id="@+id/tvTestState2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200"
+        android:textColor="@color/black_white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edTestState" />
+    <TextView
+        android:id="@+id/tvTitleFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment\nViewModel\nNon LiveData"
+        android:textColor="@color/black_white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTestState2" />
+    <TextView
+        android:id="@+id/tvTestStateNonLiveData1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300"
+        android:textColor="@color/black_white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleFragment2" />
+    <Button
+        android:id="@+id/btnChangeData2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="change"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tvTestStateNonLiveData1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleFragment2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

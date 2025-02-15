@@ -1,0 +1,154 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+
+android {
+    namespace 'com.example.androidsamplekotlinnoncompose'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.androidsamplekotlinnoncompose"
+        minSdk 29
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("/Users/timyumac/Desktop/DeskMac/Company/faswiftTech/OTC/key/keystore.jks")
+            storePassword "9EoPYj"
+            keyAlias "key0"
+            keyPassword "9EoPYj"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true // 包含 shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField "Boolean", "DEBUG", "true"
+        }
+
+        debug {
+            minifyEnabled false
+            applicationIdSuffix = ".debug"
+            buildConfigField "Boolean", "DEBUG", "false"
+        }
+    }
+
+    flavorDimensions =["version"]
+    productFlavors{
+        demo {
+            dimension = "version"
+            applicationIdSuffix = ".demo" //變種版本的應用程式 ID 即為「com.example.myapp.demo」。
+            buildConfigField "String", "API_Host_URL", "\"http://192.168.210.245:1001\""
+            buildConfigField "String", "MAIN_ACTIVITY_NAME", "\"MainActivity\""
+            manifestPlaceholders=[
+                    icon:"@mipmap/ic_launcher_demo",
+                    roundIcon:"@mipmap/ic_launcher_demo_round",
+                    appName: "@string/app_name_demo"
+            ]
+        }
+        uat {
+            dimension = "version"
+            applicationIdSuffix = ".uat" //變種版本的應用程式 ID 即為「com.example.myapp.uat」。
+            buildConfigField "String", "API_Host_URL", "\"http://192.168.210.245:1001\""
+            buildConfigField "String", "MAIN_ACTIVITY_NAME", "\"MainActivity\""
+            manifestPlaceholders=[
+                    icon:"@mipmap/ic_launcher_uat",
+                    roundIcon:"@mipmap/ic_launcher_uat_round",
+                    appName: "@string/app_name_uat"
+            ]
+        }
+
+        pro {
+            dimension = "version"
+            buildConfigField "String", "API_Host_URL", "\"http://192.168.210.245:1001\""
+            buildConfigField "String", "MAIN_ACTIVITY_NAME", "\"MainActivity\""
+            manifestPlaceholders=[
+                    icon:"@mipmap/ic_launcher_pro",
+                    roundIcon:"@mipmap/ic_launcher_pro_round",
+                    appName: "@string/app_name"
+            ]
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig = true
+    }
+}
+
+dependencies {
+
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.firebase.inappmessaging
+
+    //Navigation
+    //implementation libs.androidx.navigation.compose //Jetpack Compose integration
+    implementation libs.androidx.navigation.fragment.ktx //Kotlin
+    implementation libs.androidx.navigation.ui.ktx //Kotlin
+    //classpath libs.androidx.navigation.safe.args.gradle.plugin
+
+    // ViewModel
+    implementation libs.androidx.lifecycle.viewmodel.ktx
+    // ViewModel utilities for Compose
+    //implementation libs.androidx.lifecycle.viewmodel.compose
+    // Saved state module for ViewModel
+    implementation libs.androidx.lifecycle.viewmodel.savedstate
+
+    //Android Coroutines (non use ViewModel dependency)
+    //implementation libs.kotlinx.coroutines.android
+    //implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+
+    // Third
+    //NetWork
+    //1.Retrofit
+    implementation libs.retrofit
+    //2.OkHttp3
+    implementation libs.okhttp
+    //3.OkHttp3 的攔截器
+    implementation libs.logging.interceptor
+    //Log
+    //1.Timber
+    implementation libs.timber
+
+    //Json Convert
+    //1.Gson
+    //Gson 套件
+    implementation libs.gson
+    //Retrofit Converter Factory - Gson 套件
+    implementation libs.converter.gson
+    //2.Moshi
+    //Moshi 套件
+    implementation libs.moshi.kotlin
+    //Retrofit Converter Factory - moshi 套件
+    implementation libs.converter.moshi
+    //Android 13 after
+    //implementation "com.google.accompanist:accompanist-permissions:0.27.1"
+    implementation libs.accompanist.permissions
+    implementation libs.androidx.lifecycle.livedata.ktx
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+}

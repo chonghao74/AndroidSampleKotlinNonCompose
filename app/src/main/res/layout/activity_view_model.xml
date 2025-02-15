@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink1"
+    tools:context=".ui.activity.ViewModelActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvLiveData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LiveData"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="TIEmail,TIPassword,btnLiveDataLogin" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:helperText="email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLiveData">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TIETEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:helperText="Password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TIEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TIETPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnLiveDataLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LiveData-Login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TIPassword" />
+
+            <Button
+                android:id="@+id/btnLiveDataGetCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LiveData-Get Courses"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLiveDataLogin" />
+
+            <Button
+                android:id="@+id/btnTestGsonAndMoshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test Gson And Moshi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnLiveDataGetCourse" />
+
+            <TextView
+                android:id="@+id/tvStateFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="StateFlow"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnTestGsonAndMoshi">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/btnStateFlow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coroutines StateFlow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStateFlow" />
+
+            <TextView
+                android:id="@+id/tvFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flow"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnStateFlow">
+
+            </TextView>
+
+            <Button
+                android:id="@+id/btnFlow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coroutines StateFlow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFlow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/progressContainerCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:clickable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            android:progress="0"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

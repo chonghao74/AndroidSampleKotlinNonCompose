@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_sub_first_graph"
+    app:startDestination="@id/navFirstFragment">
+
+    <fragment
+        android:id="@+id/navFirstFragment"
+        android:name="com.example.androidsamplekotlinnoncompose.ui.fragment.NavFirstFragment"
+        android:label="fragment_nav_first"
+        tools:layout="@layout/fragment_nav_first" >
+        <action
+            android:id="@+id/action_navFirstFragment_to_navSecondFragment"
+            app:destination="@id/navSecondFragment"
+            app:popUpToSaveState="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navSecondFragment"
+        android:name="com.example.androidsamplekotlinnoncompose.ui.fragment.NavSecondFragment"
+        android:label="fragment_nav_second"
+        tools:layout="@layout/fragment_nav_second" >
+        <action
+            android:id="@+id/action_navSecondFragment_to_navThirdFragment"
+            app:destination="@id/navThirdFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navThirdFragment"
+        android:name="com.example.androidsamplekotlinnoncompose.ui.fragment.NavThirdFragment"
+        android:label="fragment_nav_third"
+        tools:layout="@layout/fragment_nav_third" >
+        <action
+            android:id="@+id/action_navThirdFragment_to_navFirstFragment"
+            app:popUpTo="@id/navFirstFragment" />
+    </fragment>
+
+</navigation>

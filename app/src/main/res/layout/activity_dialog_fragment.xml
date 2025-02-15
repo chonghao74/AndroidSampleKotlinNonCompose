@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DialogFragmentActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainContainerCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnShowDialogByOnCreateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dialog 使用  DialogFragment （OnCreateView 客製化)\nback 鍵，可取消"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnShowBottomSheetByOnCreateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dialog 使用 DialogFragment (OnCreateDialog AlertDialog)\nback 鍵，可取消\n直、橫向寬都為 match 高為 wrap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowDialogByOnCreateView" />
+
+            <Button
+                android:id="@+id/btnShowBottomSheetByOnCreateDialog2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dialog 使用 DialogFragment (OnCreateDialog AlertDialog)\nback 鍵，不可取消\n直向寬 match、橫向寬 wrap，高為 wrap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowBottomSheetByOnCreateDialog" />
+
+            <Button
+                android:id="@+id/btnShowBottomSheetDialogFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BottomSheetDialogFragment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnShowBottomSheetByOnCreateDialog2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

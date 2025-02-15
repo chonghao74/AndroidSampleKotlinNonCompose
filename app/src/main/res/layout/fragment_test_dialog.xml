@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.fragment.TestDialogByCreateViewFragment">
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:textColor="@color/black_white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234509876543211234 logout  logout!!!!!!!!!!!!!"
+        android:textColor="@color/black_white"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+    </TextView>
+    <Button
+        android:id="@+id/btnTrue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="true"
+        android:textColor="@color/select_text_color_black_white"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/select_text_color_black_white"
+        app:layout_constraintEnd_toStartOf="@+id/btnTrue"
+        app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
